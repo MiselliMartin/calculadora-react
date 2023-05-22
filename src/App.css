@@ -1,0 +1,122 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100vh;
+}
+
+.App{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(white, #cccc);
+  padding-bottom: 20px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header h1 {
+  margin: 0 auto; /* Esto centra el h1 horizontalmente */
+}
+
+.calculadora{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 600px;
+  background-color: rgb(200, 245, 170);
+  border: 5px solid green;
+  border-radius: 20px;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.input{
+  border: 6px solid #ffffff;
+  display: flex;
+  width: 95%;
+  height: 75px;
+  background-color: rgb(137 195 102);
+  margin: 5px auto 0px auto;
+  border-radius: 20px;
+  justify-content: flex-end;
+}
+
+.linea{
+  display: flex;
+  flex: 1 1;
+  align-items: flex-end;
+}
+
+.boton-contenedor{
+  background-color: rgb(163, 231, 253);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 35px;
+  flex: 1 1;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  border: 5px solid white;
+  border-radius: 66px;
+  user-select: none;
+}
+
+.boton-contenedor:active{
+  transform: scale(1.05);
+}
+
+.boton-contenedor:hover{
+  background-color: rgb(96, 190, 221);
+}
+
+.notANumber{
+  background-color: rgb(238, 163, 253);
+}
+
+.notANumber:hover{
+  background-color: rgb(200, 106, 219);
+}
+
+.esDEL{
+  background-color: rgb(253, 149, 149);
+}
+
+.esDEL:hover{
+  background-color: rgb(233, 117, 117);
+}
+
+.isEqual{
+  background-color: rgb(137 195 102);
+}
+
+.isEqual:hover{
+  background-color: rgb(90, 148, 55);
+}
+
+.isAC{
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.isAC:hover{
+  background-color: #993333;
+}
+
+/* Modo oscuro */
+.modo-oscuro{
+  background: none;
+  background-color: #080535;
+  color: #CCC;
+}
+
+.modo-oscuroCalcu{
+  background-color: #993333;
+}
