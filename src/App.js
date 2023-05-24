@@ -8,6 +8,7 @@ import { evaluate } from 'mathjs'
 
 function App() {
   const [input, setInput] = useState("");
+  
   const escribirPantalla = valor => {
       setInput(input + valor);  
   }
@@ -17,6 +18,20 @@ function App() {
   const borrar = () => {
     setInput((prevValue) => prevValue.slice(0, -1));
   };
+
+  /*const parentesis = () => {
+    let letras = input.split("");
+    let parentesisAbiertos = letras.filter(letra => letra == ("("));
+    let parentesisAbiertosCantidad = parentesisAbiertos.length
+    let parentesisCerrados = letras.filter(letra => letra == (")"));
+    let parentesisCerradosCantidad = parentesisCerrados.length
+    if (parentesisAbiertosCantidad > parentesisCerradosCantidad) {
+      setInput(input + ')');
+    } else {
+      setInput(input + "(")
+    }
+    }*/
+    /*setInput((prevValue) => prevValue.slice(0, -1));*/
 
 
 
@@ -39,8 +54,8 @@ function App() {
       <Pantalla input={input}/>
       <div className='linea'>
           <Boton manejarClic={()=>setInput("")}>AC</Boton>
-          <Boton manejarClic={escribirPantalla}>()</Boton>
-          <Boton manejarClic={escribirPantalla}>%</Boton>
+          <Boton manejarClic={escribirPantalla}>(</Boton>
+          <Boton manejarClic={escribirPantalla}>)</Boton>
           <Boton manejarClic={escribirPantalla}>/</Boton>
         </div>
         <div className='linea'>
