@@ -13,7 +13,12 @@ function App() {
       setInput(input + valor);  
   }
   const resultado = () => {
-    setInput(evaluate(input))
+    try {
+      setInput(evaluate(input))
+    } catch(error) {
+      setInput("Syntax ERROR")
+    }
+    
   }
   const borrar = () => {
     setInput((prevValue) => prevValue.slice(0, -1));
